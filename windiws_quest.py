@@ -1,7 +1,38 @@
 from tkinter import *
 
+counter = 0
+
 
 def showraven():
+    def button1def():
+        global counter
+        counter += 1
+        button1.place_forget()
+        ifcounter()
+
+    def button2def():
+        global counter
+        counter += 1
+        button2.place_forget()
+        ifcounter()
+
+    def button3def():
+        global counter
+        counter += 1
+        button3.place_forget()
+        ifcounter()
+
+    def ifcounter():
+        if counter == 0:
+            counter == 0
+        elif counter == 3:
+            next = Button(room1, text='Дальше', font=('Arial', 50), width=10, height=1)
+            next.place(x=700, y=600)
+
+    def dalshedef():
+        end1 = Toplevel()
+        end1.mainloop()
+
     room1 = Toplevel()
     room1.resizable(False, False)
     room1.geometry('1080x720+100+100')
@@ -15,23 +46,23 @@ def showraven():
     text1.pack()
 
     # Buttons
-    button1 = Button(room1, text='2+2=4', fg='blue')
-    button1.place(x=200, y=100)
+    button1 = Button(room1, text='2+2=4', fg='blue', font='Arial 20', command=button1def)
+    button1.place(x=300, y=200)
 
-    button2 = Button(room1, text='6*6=36', fg='blue')
-    button2.place(x=200, y=130)
+    button2 = Button(room1, text='6*6=36', fg='blue', font='Arial 20', command=button2def)
+    button2.place(x=300, y=400)
 
-    button3 = Button(room1, text='4^2=16', fg='blue')
-    button3.place(x=200, y=160)
+    button3 = Button(room1, text='4^2=16', fg='blue', font='Arial 20', command=button3def)
+    button3.place(x=500, y=200)
     # -----------------------------------------------------------------
-    button4 = Button(room1, text='99+8=108', fg='blue')
-    button4.place(x=200, y=190)
+    button4 = Button(room1, text='99+8=108', fg='blue', font='Arial 20')
+    button4.place(x=500, y=400)
 
-    button5 = Button(room1, text='3+3=7', fg='blue')
-    button5.place(x=200, y=210)
+    button5 = Button(room1, text='3+3=7', fg='blue', font='Arial 20')
+    button5.place(x=700, y=200)
 
-    button6 = Button(room1, text='3+3>3*2', fg='blue')
-    button6.place(x=200, y=240)
+    button6 = Button(room1, text='3+3>3*2', fg='blue', font='Arial 20')
+    button6.place(x=700, y=400)
 
     room1.mainloop()
 
